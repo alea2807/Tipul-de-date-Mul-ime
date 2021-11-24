@@ -1,0 +1,29 @@
+#elaborati un prog care citeste doua siruri de caractere si afiseaza pe ecran:
+#a caracterele care se intalnesc cel putin in unul dintre siruri
+#b caracterele care apar in ambele siruri
+#c caracterele care apar in primul si nu apar in sirul al doilea
+n1=str(input('Dati sirul 1 de caractere = '))
+n2=str(input('Dati sirul 2 de caractere = '))
+a1=set(n1)
+a2=set(n2)
+#a
+m=a1.union(a2)
+l1=[]
+for i in m:
+    if i!=' ':
+        l1.append(i)
+print('Caracterele care se intalnesc in cel putin unul dintre siruri = ',l1)
+#b
+l2=[]
+m2=a1.intersection(a2)
+for i2 in m2:
+    if i2!=' ':
+        l2.append(i)
+print('Caracterele care apar in ambele siruri = ',l2)
+#c
+m3=a1.difference(a2)
+l3=[]
+for i3 in m3:
+    if i3!=' ':
+        l3.append(i)
+print('Caracterele care apar in primul si nu apar in a doilea =',l3)
